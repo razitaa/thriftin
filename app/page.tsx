@@ -1,4 +1,64 @@
-import Link from "next/link";
+"use client";
+import { useState } from 'react'
+import FirstPage from './first-page'
+import SecondPage from './second-page'
+import ThirdPage from './third-page'
+
+const MainForm = () => {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        dob: "",
+        gender: "male",
+        address: "",
+    })
+
+    const handleChange = (event: { target: { name: any; value: any; }; }) => {
+        const { name, value } = event.target;
+        setData({
+            ...data,
+            [name]: value,
+        });
+    };
+
+
+    const [activeTab, setActiveTab] = useState(0)
+
+    const formElements = [
+        <FirstPage data={data} handleChange={handleChange} />,
+        <SecondPage data={data} handleChange={handleChange} />,
+        <ThirdPage data={data} handleChange={handleChange} />
+    ]
+
+    return (
+        <div className='min-h-screen flex flex-col justify-center bg-slate-900'>
+            <div>
+                {
+                    formElements[activeTab]
+                }
+            </div>
+            <div className='flex flex-wrap gap-x-6 mx-auto'>
+                <button
+                    disabled={activeTab === 0 ? true : false}
+                    onClick={() => setActiveTab(prev => prev - 1)}
+                    className={`px-4 py-2 rounded-xl bg-blue-600 text-white ${activeTab === 0 ? "opacity-50 bg-slate-600" : "opacity-100"}`}>
+                    Back
+                </button>
+                <button
+                    disabled={activeTab === formElements.length - 1 ? true : false}
+                    onClick={() => setActiveTab(prev => prev + 1)}
+                    className={`px-4 py-2 rounded-xl bg-blue-600 text-white ${activeTab === formElements.length - 1 ? "opacity-50 bg-slate-600" : "opacity-100"}`}>Next</button>
+                {
+                    activeTab === formElements.length - 1 ? <button className='px-4 py-2 rounded-xl bg-blue-600 text-white' onClick={() => console.log(data)}>Submit</button> : null
+                }
+            </div>
+        </div>
+    )
+}
+
+export default MainForm
+
+/*import Link from "next/link";
 import { draftMode } from "next/headers";
 
 import Date from "./date";
@@ -98,4 +158,4 @@ export default async function Page() {
       <MoreStories morePosts={morePosts} />
     </div>
   );
-}
+}*/
