@@ -13,6 +13,9 @@ export default {
         sans: ["var(--font-dm-sans)"],
         serif: ["var(--font-dm-serif-display)"]
       },
+      screens: {
+        'xs': '300px'
+      },
     },
   },
   future: {

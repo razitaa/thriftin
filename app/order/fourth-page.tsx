@@ -3,14 +3,15 @@ import React from 'react'
 const FourthPage = (props: { data: any; handleChange: any }) => {
     const {data,handleChange} = props
     return (
-        <div className="max-w-xs md:max-w-lg mx-auto">
-            <h1 className='font-bold text-4xl font-serif py-6 text-blue-950'>Let's make sure the clothes fit you well</h1>
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="max-w-xs md:max-w-lg mx-auto pt-6">
+            <h2 className='font-bold text-2xl font-serif mx-4 text-blue-950'>4/10</h2>
+            <h1 className='font-bold text-4xl font-serif pb-6 mx-4 text-blue-950'>Let's make sure the clothes fit you well</h1>
+            <form className="bg-white/50 shadow-md rounded-xl mx-4 px-8 pt-6 pb-6 mb-6">
                 <div className="inline-block w-full relative mb-5">
                     <label className="block text-blue-950 font-bold mb-2" htmlFor="gender">
-                        What size tops do you usually wear?
+                        What size tops do you usually wear?*
                     </label>
-                    <select className="block w-full bg-gray-200 text-gray-700 text-sm border border-gray-200 rounded py-3 px-4 mb-5 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='gender' value={data.gender} onChange={handleChange}>
+                    <select className="block w-full bg-gray-200 text-gray-700 text-sm border border-gray-200 rounded py-3 px-4 mb-5 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='top-size' required value={data.gender} onChange={handleChange}>
                         <option value="male">XS</option>
                         <option value="female">S</option>
                         <option value="female">M</option>
@@ -23,9 +24,9 @@ const FourthPage = (props: { data: any; handleChange: any }) => {
                         <option value="female">6XL</option>
                     </select>
                     <label className="block text-blue-950 font-bold mb-2" htmlFor="gender">
-                        What size bottoms do you usually wear?
+                        What size bottoms do you usually wear?*
                     </label>
-                    <select className="block w-full bg-gray-200 text-gray-700 text-sm border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='gender' value={data.gender} onChange={handleChange}>
+                    <select className="block w-full bg-gray-200 text-gray-700 text-sm border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='bottom-size' required value={data.gender} onChange={handleChange}>
                         <option value="male">XS ({"<"}27)</option>
                         <option value="female">S (28-29)</option>
                         <option value="female">M (30-31)</option>
@@ -79,6 +80,7 @@ const FourthPage = (props: { data: any; handleChange: any }) => {
                         </div>
                     </div>
                 </div>
+                <p className="block text-blue-950 text-xs font-bold mt-5">* Required question</p>
             </form>
         </div>
     )

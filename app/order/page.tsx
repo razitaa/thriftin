@@ -1,17 +1,67 @@
 "use client";
-import Link from 'next/link';
+import { useState } from 'react'
 
+import FirstPage from './first-page'
+import SecondPage from './second-page'
+import ThirdPage from './third-page'
+import FourthPage from './fourth-page'
+import FifthPage from './fifth-page'
+import SixthPage from './sixth-page'
+import SeventhPage from './seventh-page'
 
 
 const MainForm = () => {
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        dob: "",
+        gender: "male",
+        address: "",
+    })
+
+    const handleChange = (event: { target: { name: any; value: any; }; }) => {
+        const { name, value } = event.target;
+        setData({
+            ...data,
+            [name]: value,
+        });
+    };
+
+
+    const [activeTab, setActiveTab] = useState(0)
+
+    const formElements = [
+        <FirstPage data={data} handleChange={handleChange} />,
+        <SecondPage data={data} handleChange={handleChange} />,
+        <ThirdPage data={data} handleChange={handleChange} />,
+        <FourthPage data={data} handleChange={handleChange} />,
+        <FifthPage data={data} handleChange={handleChange} />,
+        <SixthPage data={data} handleChange={handleChange} />,
+        <SeventhPage data={data} handleChange={handleChange} />
+    ]
 
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-50 bg-[url('https://svgshare.com/i/14JQ.svg')]">
-          <div className='justify-center items-center flex flex-col w-fit'>
-            <h1 className='font-bold text-6xl md:text-8xl font-serif text-center pb-6 mx-4 text-blue-950'>Welcome to</h1>
-            <h2 className='font-bold text-xl md:text-2xl font-bold text-center pb-6 mx-4 text-blue-950'>Ready to transform your wardrobe with sustainable, unique second-hand pieces?</h2>
-            <Link href="/order"><button className='px-8 py-4 rounded-xl w-fit bg-blue-950 text-neutral-50 text-xl md:text-2xl font-bold' onClick={() => {}}>Let's go!</button></Link>
-          </div>
+        <div className="min-h-screen flex flex-col justify-center bg-neutral-50 bg-[url('https://svgshare.com/i/14JQ.svg')]">
+            <div>
+                {
+                    formElements[activeTab]
+                }
+            </div>
+            <div className='flex flex-wrap gap-x-2 xs:gap-x-4 mx-auto px-4 mb-6'>
+                <button
+                    disabled={activeTab === 0 ? true : false}
+                    onClick={() => {setActiveTab(prev => prev - 1); window.scrollTo(0, 0);}}
+                    className={`px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold ${activeTab === 0 ? "opacity-50 bg-slate-700" : "opacity-100"}`}>
+                    Back
+                </button>
+                <button
+                    disabled={activeTab === formElements.length - 1 ? true : false}
+                    onClick={() => {setActiveTab(prev => prev + 1); window.scrollTo(0, 0);}}
+                    className={`px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold ${activeTab === formElements.length - 1 ? "opacity-50 bg-slate-700" : "opacity-100"}`}>Next</button>
+                {
+                    activeTab === formElements.length - 1 ? <button className='px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold' onClick={() => console.log(data)}>Submit</button> : null
+                }
+            </div>
         </div>
     )
 }

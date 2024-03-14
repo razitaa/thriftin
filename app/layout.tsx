@@ -1,4 +1,5 @@
 import "./globals.css";
+import Link from 'next/link';
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import { EXAMPLE_PATH, CMS_NAME } from "@/lib/constants";
 
@@ -19,6 +20,25 @@ const dmSerifDisplay = DM_Serif_Display({
   display: "swap",
   weight: "400",
 });
+
+function Header() {
+  return (
+    <header className="sticky top-0 bg-neutral-50/50 backdrop-blur w-full shadow-md">
+      <div className="container mx-auto px-3">
+        <div className="py-4 lg:py-6 flex flex-col lg:flex-row items-center">
+          <div className="flex flex-col lg:flex-row justify-center items-center">
+            <Link
+              href="/"
+              className="bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-6 lg:px-4 duration-200 transition-colors"
+            >
+              logo placeholder
+            </Link>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
 
 function Footer() {
   return (
@@ -56,9 +76,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={dmSans.variable + " " + dmSerifDisplay.variable}>
       <body>
+      <Header />
         <section className="min-h-screen">
           <main>{children}</main>
-          <Footer />
         </section>
       </body>
     </html>
