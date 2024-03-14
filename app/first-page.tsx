@@ -5,18 +5,39 @@ const FirstPage = (props: { data: any; handleChange: any }) => {
 
     return (
         <div className="max-w-xs md:max-w-lg mx-auto">
+            <h1 className='font-bold text-4xl font-serif py-6 text-blue-950'>Tell us a little about yourself</h1>
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div className="mb-10">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                        Username
-                    </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="name" type="text" placeholder="Username..." value={data.name} onChange={handleChange} />
+                <div className="mb-5 grid grid-cols-1">
+                    <p className="block text-blue-950 font-bold mb-2">Your preferred clothing style is...</p>
+                    <div className=''>
+                        <div>
+                            <input type="radio" id="masculine" name="gender" value="masculine" />
+                            <label htmlFor="masculine" className='text-sm'>Masculine</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="feminine" name="gender" value="feminine" />
+                            <label htmlFor="feminine" className='text-sm'>Feminine</label>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                        Email
-                    </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="email" type="email" placeholder="Email..." value={data.email} onChange={handleChange} />
+                <div className="grid grid-cols-1">
+                    <p className="block text-blue-950 font-bold mb-2">When it comes to clothing...</p>
+                    <div>
+                        <input type="radio" id="coverage-max" name="coverage" value="max" />
+                        <label htmlFor="coverage-max" className='text-sm'>I prefer high coverage (long sleeves, high neckline, etc.) & loose fit</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="coverage-high" name="coverage" value="high" />
+                        <label htmlFor="coverage-high" className='text-sm'>I'm okay with tight fit but I'd still like more coverage</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="coverage-med" name="coverage" value="med" />
+                        <label htmlFor="coverage-med" className='text-sm'>Medium coverage is fine (short sleeve, slightly above knee, etc.)</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="coverage-low" name="coverage" value="low" />
+                        <label htmlFor="coverage-low" className='text-sm'>Anything works for me!</label>
+                    </div>
                 </div>
             </form>
         </div>
@@ -24,3 +45,5 @@ const FirstPage = (props: { data: any; handleChange: any }) => {
 }
 
 export default FirstPage
+
+/*value={data.email} onChange={handleChange}*/

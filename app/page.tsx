@@ -3,6 +3,10 @@ import { useState } from 'react'
 import FirstPage from './first-page'
 import SecondPage from './second-page'
 import ThirdPage from './third-page'
+import FourthPage from './fourth-page'
+import FifthPage from './fifth-page'
+import SixthPage from './sixth-page'
+import SeventhPage from './seventh-page'
 
 const MainForm = () => {
     const [data, setData] = useState({
@@ -27,11 +31,15 @@ const MainForm = () => {
     const formElements = [
         <FirstPage data={data} handleChange={handleChange} />,
         <SecondPage data={data} handleChange={handleChange} />,
-        <ThirdPage data={data} handleChange={handleChange} />
+        <ThirdPage data={data} handleChange={handleChange} />,
+        <FourthPage data={data} handleChange={handleChange} />,
+        <FifthPage data={data} handleChange={handleChange} />,
+        <SixthPage data={data} handleChange={handleChange} />,
+        <SeventhPage data={data} handleChange={handleChange} />
     ]
 
     return (
-        <div className='min-h-screen flex flex-col justify-center bg-slate-900'>
+        <div className='min-h-screen flex flex-col justify-center bg-neutral-50'>
             <div>
                 {
                     formElements[activeTab]

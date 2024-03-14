@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        sans: ["var(--font-dm-sans)"],
+        serif: ["var(--font-dm-serif-display)"]
       },
     },
   },

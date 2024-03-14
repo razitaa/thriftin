@@ -4,21 +4,19 @@ const ThirdPage = (props: { data: any; handleChange: any }) => {
     const {data,handleChange} = props
     return (
         <div className="max-w-xs md:max-w-lg mx-auto">
+            <h1 className='font-bold text-4xl font-serif py-6 text-blue-950'>And now we're talking colors</h1>
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div className="inline-block relative w-64 mb-10">
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="gender">
-                        Gender
+                <div className="mb-5">
+                    <label className="block text-blue-950 font-bold mb-2" htmlFor="gender">
+                        Name your favorite colors
                     </label>
-                    <select className="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name='gender' value={data.gender} onChange={handleChange}>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 text-sm border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="name" type="text" placeholder="Green, lavender..." value={data.name} onChange={handleChange} />
                 </div>
                 <div>
-                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="dob">
-                        Dob
+                    <label className="block text-blue-950 font-bold mb-2" htmlFor="dob">
+                        Name your LEAST favorite colors
                     </label>
-                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="dob" type="date"  value={data.dob} onChange={handleChange} />
+                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 text-sm border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="name" type="text" placeholder="Banana yellow, spoiled milk brown..." value={data.name} onChange={handleChange} />
                 </div>
             </form>
         </div>
