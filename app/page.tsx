@@ -3,20 +3,20 @@ import Link from 'next/link';
 
 
 
-const MainForm = () => {
+const Welcome = () => {
 
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-50 bg-[url('https://svgshare.com/i/14JQ.svg')]">
           <div className='justify-center items-center flex flex-col w-fit'>
             <h1 className='font-bold text-6xl md:text-8xl font-serif text-center pb-6 mx-4 text-blue-950'>Welcome to</h1>
-            <h2 className='font-bold text-xl md:text-2xl font-bold text-center pb-6 mx-4 text-blue-950'>Ready to transform your wardrobe with sustainable, unique second-hand pieces?</h2>
-            <Link href="/order"><button className='px-8 py-4 rounded-xl w-fit bg-blue-950 text-neutral-50 text-xl md:text-2xl font-bold' onClick={() => {}}>Let's go!</button></Link>
+            <h2 className='font-bold text-xl md:text-2xl font-bold text-center pb-6 mx-4 text-blue-950'>Ubah koleksi pakaianmu menjadi lebih unik, dengan cara yang ramah lingkungan!</h2>
+            <Link href="/order"><button className='px-8 py-4 rounded-xl w-fit bg-blue-950 text-neutral-50 text-xl md:text-2xl font-bold' onClick={() => {}}>Mulai</button></Link>
           </div>
         </div>
     )
 }
 
-export default MainForm
+export default Welcome
 
 /*import Link from "next/link";
 import { draftMode } from "next/headers";

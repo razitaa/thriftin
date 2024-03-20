@@ -52,14 +52,14 @@ const MainForm = () => {
                     disabled={activeTab === 0 ? true : false}
                     onClick={() => {setActiveTab(prev => prev - 1); window.scrollTo(0, 0);}}
                     className={`px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold ${activeTab === 0 ? "opacity-50 bg-slate-700" : "opacity-100"}`}>
-                    Back
+                    Kembali
                 </button>
                 <button
                     disabled={activeTab === formElements.length - 1 ? true : false}
                     onClick={() => {setActiveTab(prev => prev + 1); window.scrollTo(0, 0);}}
-                    className={`px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold ${activeTab === formElements.length - 1 ? "opacity-50 bg-slate-700" : "opacity-100"}`}>Next</button>
+                    className={`px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold ${activeTab === formElements.length - 1 ? "opacity-50 bg-slate-700" : "opacity-100"}`}>Lanjut</button>
                 {
-                    activeTab === formElements.length - 1 ? <button className='px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold' onClick={() => console.log(data)}>Submit</button> : null
+                    activeTab === formElements.length - 1 ? <button className='px-4 py-2 rounded-xl bg-blue-950 text-neutral-50 font-bold' onClick={() => console.log(data)}>Pesan</button> : null
                 }
             </div>
         </div>

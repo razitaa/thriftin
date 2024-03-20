@@ -23,7 +23,7 @@ const dmSerifDisplay = DM_Serif_Display({
 
 function Header() {
   return (
-    <header className="sticky top-0 bg-neutral-50/50 backdrop-blur w-full shadow-md">
+    <header className="sticky z-50 top-0 bg-neutral-50/50 backdrop-blur w-full shadow-md">
       <div className="container mx-auto px-3">
         <div className="py-4 lg:py-6 flex flex-col lg:flex-row items-center">
           <div className="flex flex-col lg:flex-row justify-center items-center">
