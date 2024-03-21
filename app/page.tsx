@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Welcome = () => {
 
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-50 bg-[url('https://svgshare.com/i/14JQ.svg')]">
+        <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-50 bg-[url('../public/background.svg')]">
           <div className='justify-center items-center flex flex-col w-fit'>
             <div className='flex flex-wrap justify-center items-center mb-3'>
               <h1 className='font-bold text-6xl md:text-8xl font-serif text-center pb-6 mx-4 text-blue-950'>Welcome to</h1>

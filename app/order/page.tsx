@@ -41,7 +41,7 @@ const MainForm = () => {
     ]
 
     return (
-        <div className="min-h-screen flex flex-col justify-center bg-neutral-50 bg-[url('https://svgshare.com/i/14JQ.svg')]">
+        <div className="min-h-screen flex flex-col justify-center bg-neutral-50 bg-[url('../public/background.svg')]">
             <div>
                 {
                     formElements[activeTab]
