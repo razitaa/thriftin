@@ -1,9 +1,9 @@
-<svg width="25" height="48" viewBox="0 0 25 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_if_7_10)">
-<path d="M6.256 46.576C4.768 46.576 3.52 46.192 2.512 45.424C1.552 44.608 1.072 43.432 1.072 41.896C1.072 40.936 1.168 39.904 1.36 38.8C1.552 37.648 1.768 36.424 2.008 35.128L6.976 12.376H1L1.216 11.512L3.808 11.224C5.152 11.08 6.328 10.744 7.336 10.216C8.344 9.688 9.304 8.944 10.216 7.984L17.128 1H18.208L16.192 10.864H24.04L23.68 12.376H15.832L10.864 36.352C10.672 37.264 10.528 38.056 10.432 38.728C10.336 39.352 10.288 39.88 10.288 40.312C10.288 40.792 10.432 41.176 10.72 41.464C11.008 41.752 11.32 41.896 11.656 41.896C12.328 41.896 13.048 41.632 13.816 41.104C14.584 40.528 15.544 39.688 16.696 38.584L17.56 39.304C16.36 41.08 14.8 42.736 12.88 44.272C10.96 45.808 8.752 46.576 6.256 46.576Z" fill="url(#paint0_radial_7_10)"/>
+<svg width="24" height="46" viewBox="0 0 24 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_7_10)">
+<path d="M5.256 45.576C3.768 45.576 2.52 45.192 1.512 44.424C0.552 43.608 0.0720001 42.432 0.0720001 40.896C0.0720001 39.936 0.168 38.904 0.36 37.8C0.552 36.648 0.768 35.424 1.008 34.128L5.976 11.376H0L0.216 10.512L2.808 10.224C4.152 10.08 5.328 9.744 6.336 9.216C7.344 8.688 8.304 7.944 9.216 6.984L16.128 0H17.208L15.192 9.864H23.04L22.68 11.376H14.832L9.864 35.352C9.672 36.264 9.528 37.056 9.432 37.728C9.336 38.352 9.288 38.88 9.288 39.312C9.288 39.792 9.432 40.176 9.72 40.464C10.008 40.752 10.32 40.896 10.656 40.896C11.328 40.896 12.048 40.632 12.816 40.104C13.584 39.528 14.544 38.688 15.696 37.584L16.56 38.304C15.36 40.08 13.8 41.736 11.88 43.272C9.96 44.808 7.752 45.576 5.256 45.576Z" fill="url(#paint0_radial_7_10)"/>
 </g>
 <defs>
-<filter id="filter0_if_7_10" x="0.5" y="0.5" width="24.04" height="46.576" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_i_7_10" x="0" y="0" width="23.04" height="45.576" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -12,9 +12,8 @@
 <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0.0901961 0 0 0 0 0.145098 0 0 0 0 0.329412 0 0 0 1 0"/>
 <feBlend mode="normal" in2="shape" result="effect1_innerShadow_7_10"/>
-<feGaussianBlur stdDeviation="0.25" result="effect2_foregroundBlur_7_10"/>
 </filter>
-<radialGradient id="paint0_radial_7_10" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13 23.496) scale(109.5 34.4157)">
+<radialGradient id="paint0_radial_7_10" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 22.496) scale(109.5 34.4157)">
 <stop stop-color="#172554"/>
 <stop offset="1" stop-color="#172554" stop-opacity="0.25"/>
 </radialGradient>
