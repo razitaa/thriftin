@@ -29,9 +29,9 @@ function Header() {
           <div className="flex flex-col lg:flex-row justify-center items-center">
             <Link
               href="/"
-              className="bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-6 lg:px-4 duration-200 transition-colors"
+              className="pt-2"
             >
-              logo placeholder
+              <img src='logo-long.svg' alt="Back to homepage" className="h-14"></img>
             </Link>
           </div>
         </div>

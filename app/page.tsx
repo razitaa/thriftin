@@ -8,8 +8,11 @@ const Welcome = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-neutral-50 bg-[url('https://svgshare.com/i/14JQ.svg')]">
           <div className='justify-center items-center flex flex-col w-fit'>
-            <h1 className='font-bold text-6xl md:text-8xl font-serif text-center pb-6 mx-4 text-blue-950'>Welcome to</h1>
-            <h2 className='font-bold text-xl md:text-2xl font-bold text-center pb-6 mx-4 text-blue-950'>Ubah koleksi pakaianmu menjadi lebih unik, dengan cara yang ramah lingkungan!</h2>
+            <div className='flex flex-wrap justify-center items-center mb-3'>
+              <h1 className='font-bold text-6xl md:text-8xl font-serif text-center pb-6 mx-4 text-blue-950'>Welcome to</h1>
+              <img src='logo-long.svg' alt='Thriftin' className='h-20 md:h-28'></img>
+            </div>
+            <h2 className='font-bold text-xl md:text-2xl font-bold text-center pb-6 mx-4 px-4 sm:px-10 lg:px-0 text-blue-950'>Ubah koleksi pakaianmu menjadi lebih unik, dengan cara yang ramah lingkungan!</h2>
             <Link href="/order"><button className='px-8 py-4 rounded-xl w-fit bg-blue-950 text-neutral-50 text-xl md:text-2xl font-bold' onClick={() => {}}>Mulai</button></Link>
           </div>
         </div>
